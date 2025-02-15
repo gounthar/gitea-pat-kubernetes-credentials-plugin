@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>4.49</version>
+        <version>4.51</version>
         <relativePath />
     </parent>
 
@@ -18,8 +18,10 @@
     <properties>
         <changelist>999999-SNAPSHOT</changelist>
         <gitHubRepo>jenkinsci/gitea-pat-kubernetes-credentials-plugin</gitHubRepo>
+        <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
+        <jenkins.baseline>2.346</jenkins.baseline>
         <!-- Baseline Jenkins version you use to build the plugin. Users must have this version or newer to run. -->
-        <jenkins.version>2.346.3</jenkins.version>
+        <jenkins.version>${jenkins.baseline}.3</jenkins.version>
     </properties>
 
     <name>Gitea PAT Kubernetes Credentials</name>
@@ -34,16 +36,8 @@
         </license>
     </licenses>
 
-    <developers>
-        <developer>
-            <id>topikachu</id>
-            <name>Gong Yi</name>
-            <email>topikachu@163.com</email>
-        </developer>
-    </developers>
-
     <scm>
-        <connection>scm:git:git://github.com/${gitHubRepo}.git</connection>
+        <connection>scm:git:https://github.com/${gitHubRepo}.git</connection>
         <developerConnection>scm:git:git@github.com:${gitHubRepo}.git</developerConnection>
         <url>https://github.com/${gitHubRepo}</url>
         <tag>gitea-pat-kubernetes-credentials-0.0.3</tag>
@@ -65,8 +59,8 @@
         <dependencies>
             <dependency>
                 <groupId>io.jenkins.tools.bom</groupId>
-                <artifactId>bom-2.346.x</artifactId>
-                <version>1654.vcb_69d035fa_20</version>
+                <artifactId>bom-${jenkins.baseline}.x</artifactId>
+                <version>1763.v092b_8980a_f5e</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>

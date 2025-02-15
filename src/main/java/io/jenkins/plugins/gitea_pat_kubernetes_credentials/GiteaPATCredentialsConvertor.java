@@ -15,7 +15,6 @@ import java.nio.charset.CharsetDecoder;
 import java.nio.charset.CodingErrorAction;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
-import java.util.Optional;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
